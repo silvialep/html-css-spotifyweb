@@ -13,6 +13,10 @@ a {
     text-decoration: none;
 }
 
+li:hover a {
+    color: white;
+}
+
 a:visited {
     color: rgb(113, 113, 113);
 }
@@ -26,7 +30,7 @@ a:visited {
     width: 100%;
 
     /* debug */
-    height: calc(100vh - 150px);
+    height: calc(100vh - 80px);
     background-color: rgb(20, 25, 34);
 }
 
@@ -37,41 +41,103 @@ header nav {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    min-width: 400px;
-    height: calc(100vh - 150px);
+    align-content: space-between;
+    min-width: 200px;
+    height: calc(100vh - 80px);
     background-color: black;
-    overflow: none;
 
+    overflow: none;
 }
 
-header nav .top-links img {
-    width: 70%;
-    padding: 20px;
+header nav .top-links .logo img {
+    width: 100%;
+    padding: 10px;
 }
 
 .top-links ul {
-    line-height: 2em;
-    font-size:1.5em;
+    font-size:1em;
     font-weight: 600;
     list-style-type: none;
     color: rgb(113, 113, 113);
 }
 
+.top-links .menu-sections li {
+    padding-left: 10px;
+}
+
 .top-links .menu-sections .selected {
-    padding-left: 15px;
+    padding-left: 8px;
+    border-left: 2px solid rgb(173, 255, 47);
+}
+
+.selected a {
     color: white;
-    border-left: 5px solid rgb(173, 255, 47);
+}
+
+.top-links .selected .menu-icon {
+    opacity: 1.5;
 }
 
 .menu-sections li {
     display: flex;
     justify-content: flex-start;
-    gap: 20px;
+    align-items: center;
+    gap: 5px;
+    
 }
 
-.top-links i {
-    font-size: 2em;
+
+.top-links .menu-icon {
+    width: 15%;
+    opacity: 0.5;
 }
+
+
+.top-links .menu-icon img {
+    width: 100%;
+}
+
+
+
+.playlist {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    
+    padding: 20px 10px;
+    font-size:1em;
+}
+
+.playlist h3 {
+    color: white;
+    text-transform: uppercase;
+}
+
+.add-playlist {
+    color: rgb(113, 113, 113);
+    font-weight: bold;
+    line-height: 2em;
+}
+
+.add-playlist .menu-tag {
+    display: inline-block;
+}
+
+
+.add-playlist i {
+    font-size: 3em;
+}
+
+.playlist ul {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    list-style-type: none;
+    font-weight: initial;
+}
+
+
 
 
 
@@ -93,7 +159,7 @@ main nav {
     top: 0;
     right: 0;
     width: 100%;
-    height: 100px;
+    height: 80px;
     background-color: black;
     opacity: 0.3;
 }
@@ -119,6 +185,6 @@ main nav {
 
 footer {
     width: 100%;
-    height: 150px;
+    height: 80px;
     background-color: rgb(40, 40, 40);
 }
