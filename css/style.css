@@ -235,7 +235,7 @@ header nav .top-links .logo-mobile {
     }
 
     header nav .top-links .logo-mobile {
-    display: block;
+        display: block;
     }
 
     header nav .top-links .logo-mobile img {
@@ -244,15 +244,21 @@ header nav .top-links .logo-mobile {
     }
 
     .top-links .menu-mobile {
+        width: 100%;
         display: flex;
         flex-direction: column;
         gap: 5px;
         padding-left: 10px;
     }
 
-    .top-links .menu-mobile .menu-icon img {
-        width: 500%;
+    .top-links .menu-mobile .menu-icon {
+        width: 100%;
     }
+
+    .top-links .menu-mobile .menu-icon img {
+        width: 80%;
+    }
+
 
     .bottom-links-mobile {
         display: flex;
@@ -277,13 +283,14 @@ header nav .top-links .logo-mobile {
 
     .bottom-links-mobile .menu-icon img {
         width: 100%;
+        opacity: 1;
     }
 
 
-
-
-
 }
+
+
+
 
 
 
@@ -310,7 +317,7 @@ main #upgrade-bar {
     justify-content: flex-end;
     align-items: center;
     padding-right: 5px;
-    width: 100%;
+    width: calc(100% - 200px);
     height: 80px;
     background-color: rgba(0, 0, 0, 0.5);
 }
@@ -337,6 +344,7 @@ main #upgrade-bar {
 
 .central-section nav ul {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: center;
     gap: 20px;
@@ -367,8 +375,22 @@ main #upgrade-bar {
 .central-section .main-sections {
     width: 100%;
     height: 400px;
-    /* background-color: blueviolet; */
+}
+
+.recently-played, .created-for, .popular-artists {
+    display: flex;
+    flex-flow: row wrap;
+    gap: 10px;
+    width: 100%;
+    padding: 10px;
+}
+
+.album-card {
+    width: calc(100% / 6 - (10px / 6 * 5));
+    /* height: 300px; */
+    background-color: aquamarine;
     border: 1px solid black;
+
 }
 
 
@@ -378,7 +400,27 @@ main #upgrade-bar {
 
 
 
+@media screen and (max-width: 992px) {
+    .album-card {
+        width: calc(100% / 4 - (10px / 4 * 3))
+    }
+}
 
+
+
+
+@media screen and (max-width: 768px) {
+    .album-card {
+        width: calc(100% / 2 - (10px / 2))
+    }
+}
+
+
+@media screen and (max-width: 575px) {
+    main #upgrade-bar {
+        width: calc(100% - 50px);
+    }
+}
 
 
 
