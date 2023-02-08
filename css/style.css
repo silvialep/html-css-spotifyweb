@@ -31,7 +31,6 @@ a:visited {
 
     width: 100%;
 
-    /* debug */
     height: calc(100vh - 80px);
     background-color: rgb(20, 25, 34);
 }
@@ -54,7 +53,7 @@ header nav {
     background-color: black;
     font-size: smaller;
 
-    overflow: none;
+    overflow: hidden;
 }
 
 header nav .top-links .logo-normal img {
@@ -65,8 +64,6 @@ header nav .top-links .logo-normal img {
 header nav .top-links .logo-mobile {
     display: none;
 }
-
-
 
 .top-links .menu-mobile {
     display: none;
@@ -123,6 +120,7 @@ header nav .top-links .logo-mobile {
     flex-direction: column;
     align-items: flex-start;
     gap: 10px;
+
     
     padding: 20px 0 0 20px;
     font-size:1em;
@@ -160,6 +158,11 @@ header nav .top-links .logo-mobile {
     gap: 10px;
     list-style-type: none;
     font-weight: initial;
+    
+/* 
+    max-height: 250px;
+    overflow-y: scroll; */
+
 }
 
 
@@ -375,6 +378,7 @@ main #upgrade-bar {
 .central-section .main-sections {
     width: 100%;
     height: 400px;
+    
 }
 
 .recently-played, .created-for, .popular-artists {
