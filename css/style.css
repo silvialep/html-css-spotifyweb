@@ -317,18 +317,19 @@ main #upgrade-bar {
     top: 0;
     right: 0;
     display: flex;
+    z-index: 3;
     justify-content: flex-end;
     align-items: center;
     padding-right: 5px;
     width: calc(100% - 200px);
     height: 80px;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgb(8, 11, 18);
 }
 
 .btn-upgrade {
     width: 250px;
     height: 40px;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgb(8, 11, 18);
     border: 1px solid white;
     border-radius: 20px;
     color: white;
@@ -388,6 +389,7 @@ main #upgrade-bar {
     flex-flow: row wrap;
     gap: 10px;
     width: 100%;
+    padding-top: 20px;
 
 }
 
@@ -432,7 +434,6 @@ main #upgrade-bar {
 .central-section .main-sections h2 {
     color: white;
     font-size: 1.2em;
-    padding-bottom: 20px;
 }
 
 .album-card:hover img {
