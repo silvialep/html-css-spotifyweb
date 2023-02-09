@@ -316,17 +316,17 @@ main #upgrade-bar {
     display: flex;
     z-index: 3;
     justify-content: flex-end;
-    align-items: center;
-    padding-right: 5px;
+    /* align-items: center; */
+    padding: 10px 5px 0 0;
     width: calc(100% - 200px);
     height: 80px;
-    background-color: rgb(8, 11, 18);
+    background-color: rgb(8, 11, 18, 0.8);
 }
 
 .btn-upgrade {
-    width: 250px;
+    width: 200px;
     height: 40px;
-    background-color: rgb(8, 11, 18);
+    background-color: rgb(8, 11, 18, 0.8);
     border: 1px solid white;
     border-radius: 20px;
     color: white;
@@ -338,8 +338,7 @@ main #upgrade-bar {
 }
 
 .central-section {
-    margin-top: 80px;
-    padding-top: 20px;
+    padding: 100px 20px 0 0;
 }
 
 
@@ -361,14 +360,21 @@ main #upgrade-bar {
     align-items: center;
     justify-content: space-between;
     gap: 5px;
+    position: relative;
 }
 
-.central-selected .green-line {
-    width: 30px;
-    height: 2px;
+.central-section nav ul li.central-selected::before {
+    content: "";
+
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translatex(-50%);
+    width: 40px;
+    height: 3px;
     background-color: rgb(173, 255, 47);
-
 }
+
 
 
 
@@ -433,6 +439,11 @@ main #upgrade-bar {
     font-size: 1.2em;
 }
 
+.popular-artists .album-card .card-image {
+    border-radius: 50%;
+    overflow: hidden;
+}
+
 .album-card:hover img {
     opacity: 0.5;
 }
@@ -488,16 +499,20 @@ main #upgrade-bar {
 
 
 footer {
-    width: 100vw;
+    width: 100%;
     height: 80px;
     background-color: rgb(40, 40, 40);
 }
 
+
+
+
+/* 
+
 #footer-container {
     display: flex;
     justify-content: space-between;
-    gap: 20px;
-    width: 100vw;
+    width: 100%;
     height: 100%;
     padding: 10px;
 }
@@ -506,15 +521,16 @@ footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 15px;
+    max-width: 160px;
+    width: 100%;
     height: 100%;
 
 }
 
 .footer-side-inner {
     display: flex;
-    gap: 5px;
     height: 100%;
+    width: 70%;
 }
 
 .footer-side-inner .card-image {
@@ -531,6 +547,8 @@ footer {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    width: 100%;
+    height: 100%;
 }
 
 .footer-side .footer-side-inner .card-caption .album-artist:hover a {
@@ -539,10 +557,17 @@ footer {
 }
 
 .footer-icons {
+    width: 30%;
+    height: 100%;
     display: flex;
     align-items: center;
-    gap: 15px;
+    justify-content: space-between;
     
+}
+
+.footer-side.right {
+    width: 100%;
+    height: 100%;
 }
 
 .footer-side.right a {
@@ -558,14 +583,16 @@ footer {
 }
 
 .volume {
+    width: 100%;
+    height: 100%;
     display: flex;
     align-items: center;
-    gap: 10px;
+    justify-content: center;
 }
 
 .bar {
     position: relative;
-    min-width: 100px;
+    min-width: 80px;
     height: 5px;
     background-color: rgb(90, 90, 90);
     
@@ -615,10 +642,11 @@ footer {
     display: flex;
     flex-direction: column;
     gap: 20px;
-    min-width: 400px;
-    max-width: 600px;
+    min-width: 200px;
+    max-width: 500px;
+    width: 100%;
     height: 100%;
-    padding: 10px;
+    padding: 10px 0;
 
 
     align-self: center;
@@ -631,7 +659,7 @@ footer {
     justify-content: center;
     align-items: center;
     font-size: 1.1em;
-    gap: 10px;
+    width: 100%;
     height: 50%;
 }
 
@@ -650,13 +678,12 @@ footer {
 }
 
 .track-bar {
-    justify-content: space-between;
     color: white;
     font-size: 0.6em;
 }
 
 .track-bar .bar {
-    width: 300px;
+    width: 400px;
 }
 
 .track-bar .bar:hover .bar-inner {
@@ -675,9 +702,26 @@ footer {
 
 
 
+@media screen and (max-width: 992px) {
+    .track-bar .bar {
+        width: 300px;
+    }
+}
+
+@media screen and (max-width: 842px) {
+    .track-bar .bar {
+        width: 250px;
+    }
+}
+
+
 @media screen and (max-width: 768px) {
     .footer-icons.left {
         flex-direction: column;
         gap: 2px;
     }
-}
+
+    .track-bar .bar {
+        width: 200px;
+    }
+} */
