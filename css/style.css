@@ -503,31 +503,52 @@ footer {
     height: 60px;
     display: flex;
     justify-content: space-between;
+    gap: 5px;
     background-color: rgb(40, 40, 40);
     padding: 10px;
 }
 
 #footer-left {
     width: 100%;
-    max-width: 160px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    max-width: 200px;
 }
 
 #footer-left .current-track {
     display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 90%;
     height: 100%;
     font-size: 0.8em;
 }
 
-#footer-left .current-track img {
+#footer-left .current-track .current-track-image {
+    width: 20%;
     height: 100%;
+}
+
+#footer-left .current-track .current-track-image img {
+    width: 100%;
 }
 
 #footer-left .current-track .current-track-tag {
     display: flex;
     flex-direction: column;
+}
+
+.current-track-tag .album-artist:hover a {
+    color: white;
+    text-decoration: underline;
+}
+
+#footer-left .footer-icons {
+    display: flex;
+    justify-content: space-between;
+    gap: 5px;
+}
+
+#footer-left .footer-icons a:hover {
+    color: white;
 }
 
 
@@ -536,16 +557,32 @@ footer {
 
 
 #footer-central {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
     width: 100%;
     max-width: 500px;
     min-width: 200px;
+    padding-top: 5px;
 }
 
-.player-buttons, .player-timeline {
+#footer-central .player-buttons, 
+#footer-central .player-timeline {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 50%;
+    gap: 15px;
+}
+
+
+#footer-central .player-buttons a {
+    font-size: 1.2em;
+    color: white;
+}
+
+#footer-central .player-buttons .fa-circle-play {
+    font-size: 1.5em;
 }
 
 .player-bar {
@@ -561,7 +598,7 @@ footer {
 
 .player-bar-current {
     position: relative;
-    width: 15%;
+    width: 25%;
     height: 100%;
     border-radius: 2px;
     background-color: white;
@@ -598,12 +635,38 @@ footer {
 #footer-right {
     display: flex;
     align-items: center;
+    justify-content: flex-end;
     width: 100%;
-    max-width: 160px;
+    max-width: 200px;
+    gap: 5px;
+}
+
+#footer-right .footer-icons a {
+    font-size: 0.8em;
+    color: white;
+    width: 50%;
+}
+
+#footer-right .player-bar {
+    width: 50%;
 }
 
 
 
+
+
+
+
+
+
+
+
+@media screen and (max-width: 768px) {
+    #footer-left .footer-icons {
+        flex-direction: column;
+        gap: 2px;
+    }
+}
 /* 
 
 #footer-container {
